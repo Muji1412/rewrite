@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    gcp:
+      storage:
+        credentials:
+          location: classpath:google_bucket.json
+        project-id: ${PROJECT_ID}
+        bucket: rewrite_project
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /api-docs
+  packages-to-scan: com.example.rewrite.controller.rest
